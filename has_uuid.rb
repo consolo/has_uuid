@@ -5,7 +5,7 @@ module Consolo
     module ClassMethods
       def has_uuid
         self.class_eval do
-          set_primary_key 'uuid'
+          self.primary_key = 'uuid'
           before_create :generate_uuid
         end
         
